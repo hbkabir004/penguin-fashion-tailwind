@@ -15,7 +15,13 @@
     <!-- Custom CSS StyleSheet -->
     <link rel="stylesheet" href="style.css" />
     <!-- Tailwind Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.20.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
       tailwind.config = {
         theme: {
@@ -33,9 +39,54 @@
     </script>
   </head>
   <body>
-    <header>
+    <header class="bg-penguin">
+      <!-- NavBar Strat -->
+      <nav class="container mx-auto">
+        <div class="navbar">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabindex="0"
+                class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-penguin rounded-box w-52"
+              >
+                <li><a>HOME</a></li>
+                <li><a>Product</a></li>
+                <li><a>About Us</a></li>
+                <li><a>Contact Us</a></li>
+              </ul>
+            </div>
+            <img class="w-52" src="./images/logo.png" alt="" srcset="" />
+          </div>
+          <div class="navbar-end hidden lg:flex">
+            <ul class="menu menu-horizontal p-0">
+              <li><a>HOME</a></li>
+              <li><a>Product</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- NavBar End -->
       <section
-        class="bg-penguin container sm:mx-auto flex flex-col sm:flex-row text-left sm:text-left sm:justify-around"
+        class="container mx-auto flex flex-col sm:flex-row text-left sm:text-left sm:justify-between"
       >
         <!-- <div class=" "> -->
         <div class="space-y-4 pt-32 ml-5 sm:ml-0">
